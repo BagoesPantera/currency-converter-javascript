@@ -1,0 +1,116 @@
+body{
+    background-color: black;
+}
+
+.container{
+    width: 35%;
+    height: 30%;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    
+    /* https://stackoverflow.com/questions/14123999/center-a-div-horizontally-and-vertically */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.container h3, select{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #333;
+}
+
+.fromto{
+    display: flex;
+}
+.fromto p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.from{
+    width: 50%;
+    display: flex;
+    background-color: #333;
+}
+.from p{
+    margin-left: auto;
+}
+.from select{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: max-content;
+    height: max-content;
+}
+
+.to{
+    width: 50%;
+    display: flex;
+    background-color: #333;
+}
+.to p{
+    margin-left: 5%;
+}
+.to select{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: max-content;
+    height: max-content;
+}
+
+.amount{
+    display: flex;
+}
+.fromamount{
+    display: flex;
+    width: 50%;
+    color: white;
+}
+.fromamount input{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5%;
+    margin-left: auto;
+    background-color: white;
+}
+
+.toamount{
+    display: flex;
+    width: 50%;
+}
+.toamount input{
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: white;
+}
+
+.btn{
+    width: 100%;
+    margin-top: 3%;
+    text-align: center;
+}
+.btn button{
+    margin-left: auto;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+}
+
+.bottom{
+    width: 100%;
+    font-size: 13px;
+}
+.bottom p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bottom a{
+    color: white;
+}
