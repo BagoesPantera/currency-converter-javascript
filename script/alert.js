@@ -1,4 +1,4 @@
-function swalAlert(icon, text, title) {
+function swalAlert(icon, title, text) {
     Swal.fire({
         icon: icon,
         title: title,

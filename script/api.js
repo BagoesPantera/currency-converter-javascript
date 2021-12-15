@@ -16,7 +16,6 @@ function getAPI() {
 
 function result(currency) {
     const data = currency.rates;
-    // console.log(data);
 
     // Rate
     document.querySelector("#jpy").innerHTML = `${data["JPY"]}`;
@@ -33,11 +32,14 @@ function result(currency) {
         let to = currency.rates[toselect.options[toselect.selectedIndex].value];
         
         let total = (to/from) * frominput.value;
-        console.log("total : " + total);
-
-        if (isNaN(total)) {
-            swalAlert("error", "Select Currency !", "Error");;
-        } else {
+        
+        if (from === undefined || to === undefined) {
+            swalAlert("error",  "Error", "Select Currency !");
+        }else if (frominput.value < 0) {
+            swalAlert("error", "Error", "Is your money negative ?");
+        }else if (isNaN(total)) {
+            swalAlert("error",  "Error", "Input a number !");
+        }else {
             toinput.setAttribute('value', total);  
             addHistory({
                 from : fromselect.options[fromselect.selectedIndex].value,
