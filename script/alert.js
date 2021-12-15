@@ -12,4 +12,4 @@ const swalWithBootstrapButtons = Swal.mixin({
       cancelButton: 'btn btn-danger'
     },
     buttonsStyling: false
-  })
+  });

@@ -61,7 +61,7 @@ function readHistory(){
                     localStorage.removeItem(storageNm);  
                     swalWithBootstrapButtons.fire(
                         'Deleted!',
-                        'Your file has been deleted.',
+                        'Your history has been deleted.',
                         'success'
                     );
                     readHistory();
@@ -71,7 +71,7 @@ function readHistory(){
                 ) {
                     swalWithBootstrapButtons.fire(
                     'Cancelled',
-                    'Your imaginary file is safe :)',
+                    'Your history is safe :)',
                     'error'
                     )
                 }
@@ -82,5 +82,3 @@ function readHistory(){
     }
 }
 readHistory();
-
-
