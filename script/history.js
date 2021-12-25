@@ -2,16 +2,12 @@
 const storageNm = 'CyconHistory';
 let history = [];
 
-function a(data) {
-    console.log(data);
-}
-
 //Primedev Calculator
 function addHistory(data){
     if(localStorage.getItem(storageNm) !== null){
         history = JSON.parse(localStorage.getItem(storageNm));
     } 
-    if(history.length > 3){
+    if(history.length > 2){
         history.shift();
     }
     history.push(data);
