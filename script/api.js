@@ -65,8 +65,6 @@ function result(currency) {
     var keyCount  = Object.keys(data).length;
     document.querySelector("#currencyCount").innerHTML = `. . . and ${keyCount - 5}+ more currencies.`;
 
-    document.querySelector("#update").innerHTML = ` `;
-
     document.querySelector("#convertbtn").addEventListener('click', function () {
         var api = async (curFrom, curTo) => {
             if (curFrom === "Choose..." || curTo === "Choose...") {
