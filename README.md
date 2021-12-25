@@ -2,7 +2,7 @@
 
 ## This project made with 
 * [JavaScript](https://www.javascript.com/).
-* [ExchangeRate-API](https://www.exchangerate-api.com/). 
+* [currencyconverterapi](https://www.currencyconverterapi.com/). 
 * [Bootstrap](https://getbootstrap.com/).
 * [Bootswatch](https://bootswatch.com/). 
 * [sweetalert2](https://sweetalert2.github.io/).
