@@ -16,7 +16,14 @@ function addHistory(data){
 
 function readHistory(){
     const historyDisplay = document.querySelector("#historydisplay");
-    if(localStorage.getItem(storageNm) !== null){
+    if(localStorage.getItem(storageNm) === null){
+        localStorage.setItem(storageNm,'[]'); 
+    }
+    
+    if (localStorage.getItem(storageNm).length <= 2) {
+        historyDisplay.innerHTML = `<p class="text-center">No history available</p>`;
+    }
+    else {
         history = JSON.parse(localStorage.getItem(storageNm))
         historyDisplay.innerHTML = `
         <thead>
@@ -54,7 +61,7 @@ function readHistory(){
                     reverseButtons: true
                 }).then((result) => {
                 if (result.isConfirmed) {
-                    localStorage.removeItem(storageNm);  
+                    localStorage.setItem(storageNm,'[]');  
                     swalWithBootstrapButtons.fire(
                         'Deleted!',
                         'Your history has been deleted.',
@@ -73,8 +80,6 @@ function readHistory(){
                 }
                 });
         });
-    }else{
-        historyDisplay.innerHTML = `<p class="text-center">No history available</p>`;
     }
 }
 readHistory();
